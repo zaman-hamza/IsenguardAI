@@ -1,0 +1,166 @@
+/* src/styles/dashboard.css */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Sharp');
+
+:root {
+    --dashboard-color-primary: #8c95e4;
+    --dashboard-color-danger: #ff7782;
+    --dashboard-color-success: #41f1b6;
+    --dashboard-color-warning: #ffbb55;
+    --dashboard-color-white: #202528;
+    --dashboard-color-info: #7d8da1;
+    --dashboard-color-dark: #edeffd;
+    --dashboard-color-light: rgba(132, 139, 200, 0.18);
+    --dashboard-color-dark-varient: #a3bdcc;
+    --dashboard-color-background: #181a1e;
+    --dashboard-card-border-radius: 2rem;
+    --dashboard-border-radius-1: 0.4rem;
+    --dashboard-border-radius-2: 1.2rem;
+    --dashboard-card-padding: 2.5rem;
+    --dashboard-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-body {
+    font-family: 'Poppins', sans-serif;
+    font-size: .88rem;
+    background: var(--dashboard-color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--dashboard-color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    padding-left: 48px;
+    padding-top: 24px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--dashboard-color-dark);
+    text-align: left;
+}
+
+.dashboard-container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dashboard-card {
+    background: var(--dashboard-color-white);
+    border-radius: var(--dashboard-card-border-radius);
+    padding: var(--dashboard-card-padding);
+    width: 320px;
+    height: 280px;
+    box-shadow: var(--dashboard-box-shadow);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    opacity: 0;
+    animation: dashboard-fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes dashboard-fadeIn {
+    to { opacity: 1; }
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dashboard-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--dashboard-color-dark-varient);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dashboard-compliance-options {
+    display: none;
+    text-align: center;
+}
+
+.dashboard-compliance-options .dashboard-cards {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dashboard-back-btn {
+    display: inline-block;
+    margin-top: 44px;
+    padding: 15px 30px;
+    background-color: var(--dashboard-color-primary);
+    color: var(--dashboard-color-dark);
+    border-radius: var(--dashboard-border-radius-2);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.dashboard-back-btn:hover {
+    background-color: #757fdd;
+}
+
+.dashboard-footer {
+    background-color: #202528;
+    color: #a3bdcc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.85rem;
+}
+
+.dashboard-footer a {
+    color: #8c95e4;
+    text-decoration: none;
+    margin: 0 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-footer a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    font-size: 26px;
+    color: var(--dashboard-color-primary);
+    font-weight: bold;
+}
+
+.dashboard-card p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: var(--dashboard-color-dark-varient);
+    line-height: 1.5;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 44px;
+    padding: 15px 30px;
+    background-color: var(--dashboard-color-primary);
+    color: var(--dashboard-color-dark);
+    border-radius: var(--dashboard-border-radius-2);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.1rem;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
